@@ -49,5 +49,12 @@ public class Room {
         }
         return false;
     }
+    public void checkout() {
+        occupied = false;
+        dirty = true;
+    }
+
 
 }
+
+
