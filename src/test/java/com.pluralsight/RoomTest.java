@@ -17,4 +17,19 @@ public class RoomTest {
         assertTrue(room.isOccupied());
         assertTrue(room.isDirty());
     }
-}
+    @Test
+    public void testCannotCheckInOccupiedRoom() {
+
+        Room room = new Room(2, 150.00, true, false);
+
+        boolean result = room.checkIn();
+
+        assertFalse(result);
+    }
+
+
+
+
+
+
+    }
