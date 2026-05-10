@@ -30,13 +30,24 @@ public class Room {
         return dirty;
     }
 
-    public boolean isAvailable(){
+    public boolean isAvailable() {
         //if its not dirty and not occupied then its available
-        if(!this.isOccupied() && !this.isDirty()){
+        if (!this.isOccupied() && !this.isDirty()) {
             return true;
         }
 
         //otherwise its not avaialable
         return false;
+
     }
+
+    public boolean checkIn() {
+        if (isAvailable()) {
+            occupied = true;
+            dirty = true;
+            return true;
+        }
+        return false;
+    }
+
 }
