@@ -53,6 +53,13 @@ public class Room {
         occupied = false;
         dirty = true;
     }
+    public boolean cleanRoom() {
+        if (!occupied) {
+            dirty = false;
+            return true;
+        }
+        return false;
+    }
 
 
 }
