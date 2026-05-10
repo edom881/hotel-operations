@@ -27,7 +27,14 @@ public class Employee {
         hoursWorked = (punchOutTime - punchInTime) / 100.0;
 
     }
+    // getters
+    public int getPunchInTime() {
+        return punchInTime;
+    }
 
+    public int getPunchOutTime() {
+        return punchOutTime;
+    }
 
         public double getRegularHours () {
             if (hoursWorked > 40) {
